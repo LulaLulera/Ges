@@ -1,0 +1,42 @@
+<div class="row index-box">
+	<div class="col-md-12">
+		<h1 class="row center-xs text-title">Alumnos Matriculados - 2017/2018</h1>
+		<div class="row">
+			<div class="col-md-12 center-xs ">
+				<% @alumns.each do |alumn| %>
+					<table class="row center-xs">
+						<td class="body-content"><%= alumn.nombre %> <%= alumn.apellido1%> <%= alumn.apellido2%></td>	
+						<th>
+							<button class="btn-actions">
+								<%= link_to alumn do %>
+  									<i class="fa fa-eye tooltip" style="font-size:24px"><span class="tooltiptext">Ver Alumno</span></i>
+								<% end %>
+							</button>
+						</th>
+						<th>
+							<button class="btn-actions">
+								<%= link_to edit_alumn_path(alumn) do %>
+  									<i class="fa fa-pencil tooltip" style="font-size:24px"><span class="tooltiptext">Editar Alumno</span></i>
+								<% end %>
+							</button>
+						</th>
+						<th>
+							<button class="btn-actions">
+								<%= link_to alumn,method: :delete, :data => { :confirm => '¿Estas seguro de eliminar el registro?' } do %>
+  									<i class="fa fa-trash tooltip" style="font-size:24px"><span class="tooltiptext">Eliminar Alumno</span></i>
+								<% end %>
+							</button>
+						</th>
+					</table>
+				<%end%>
+			</div>
+		</div>
+		<div class="row center-xs">
+			<div class="col-md-4"></div>
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<button class="btn-primary col-md-10"><%= link_to "Añadir Alumno", new_alumn_path()%></button>
+			</div>	
+		</div>
+	</div>
+</div>

@@ -1,0 +1,422 @@
+
+html{
+	width:100%;
+	height: 100%;
+	
+  /*background: url(image_path('fondo3.jpg')) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+
+body{
+	margin: 0px;
+}
+
+.container{   
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  //left: 0;
+  right: 60px;
+  margin: 0 auto;
+  top:20px;
+}
+
+.container{   
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top:20px;
+}
+
+.div-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    &.hidden{
+          overflow: hidden;
+          margin:20% auto;
+      }
+    .img{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;   
+        transform:scale(1.2);
+        -ms-transform:scale(1.2); // IE 9 
+        -moz-transform:scale(1.2); // Firefox 
+        -webkit-transform:scale(1.2); // Safari and Chrome 
+        -o-transform:scale(1.2); // Opera 
+        -webkit-transition: all 500ms ease-in-out; // IE 9
+        -moz-transition: all 500ms ease-in-out; // Firefox
+        -ms-transition: all 500ms ease-in-out; // Safari and Chrome 
+        -o-transition: all 500ms ease-in-out; // Opera       
+    }        
+    &:hover{
+        .img{
+            transform:scale(1);
+            -ms-transform:scale(1); // IE 9 
+            -moz-transform:scale(1); // Firefox 
+            -webkit-transform:scale(1); // Safari and Chrome 
+            -o-transform:scale(1); // Opera
+        }
+    
+    } 
+}
+.text{
+	margin: 20px auto;
+  font-family: 'Shrikhand', cursive;
+	font-size: 25px; 
+}
+
+.text{
+  margin: 20px auto;
+  font-family: 'Shrikhand', cursive;
+  font-size: 25px; 
+}
+
+.div-rotate{
+    .rotate{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg); // IE 9
+        -moz-transform: rotate(0deg); // Firefox
+        -o-transform: rotate(0deg); // Safari and Chrome
+        -ms-transform: rotate(0deg); // Opera
+        -webkit-transition: all 500ms ease-in-out; // IE 9
+        -moz-transition: all 500ms ease-in-out; // Firefox
+        -ms-transition: all 500ms ease-in-out; // Safari and Chrome 
+        -o-transition: all 500ms ease-in-out; // Opera    
+    }      
+    &:hover{
+        .rotate{
+            transform: rotate(-10deg);
+            -webkit-transform: rotate(-10deg); // IE 9
+            -moz-transform: rotate(-10deg); // Firefox
+            -o-transform: rotate(-10deg); // Safari and Chrome
+            -ms-transform: rotate(-10deg); // Opera
+        }
+     } 
+}
+.white{
+	color:white;
+}
+
+.h3title{
+  color:#27a525;
+}
+
+nav a{
+	color:black;
+	padding: 2px;
+	display: block;
+	font-family: 'Lobster', cursive;
+	font-size: 25px;
+
+}
+
+.objetivos p{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+}
+
+center{
+  margin-bottom: 60px;
+}
+
+th{
+  color:black;
+  padding: 10px;
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+}
+
+.horario{
+  border: 2px solid #c2ef6b;
+}
+
+a{
+	color:black;
+}
+
+nav a:visited{
+	color: black;
+
+}
+
+input:hover{
+	color:black;
+	background-color: white;
+}
+
+nav{
+	-webkit-box-shadow: 20px 10px 37px 0px rgba(46,1,46,1);
+	-moz-box-shadow: 20px 10px 37px 0px rgba(46,1,46,1);
+	box-shadow: 20px 10px 37px 0px rgba(46,1,46,1);
+}
+
+p a{
+	color: black;
+}
+p a:visited{
+	color: black;
+}
+
+p a:hover{
+	color:white;
+	background-color: black;
+}
+
+.actions{
+	margin-top:1em;
+}
+
+.img_photo{
+	width: 200px;
+}
+.btn-actions{
+    background-color: #c2ef6b;;
+    color: black;
+    margin: 8px;
+    width: 60px;
+    height: 40px;
+    border-radius: 66%;
+}
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 6px;
+    margin: 0px 23px;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.btn-primary, .btn-primary:visited{
+	 background-color: #c2ef6b;;
+    color: black;
+    font-family: 'Shrikhand', cursive;
+    font-size: 23px;
+    margin: 12px;
+    padding: 5px;
+}
+
+button:hover{
+	box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+ 	outline-color: rgba(49, 138, 172, 0);
+  	outline-offset: 80px;
+  	text-shadow: 1px 1px 6px #fff;
+}
+
+.lbl_format{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 20px; 
+}
+
+.form_control{
+	padding: 5px;
+	font-size: 15px;
+}
+
+.check{
+	font-size: 21px;
+	margin:2px;
+}
+
+.text-title{
+    font-family: 'Shrikhand', cursive;
+    font-size: 2.5em;
+    color: black;
+    text-decoration: none;
+}
+
+.checkbox{
+  transform: scale(1.5);
+}
+
+#categories_{
+	-ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 5px;
+}
+
+td{
+	width:200px;
+	font-size: 20px
+}
+
+.body_content{
+	font-size: 22px;
+	text-align: justify;
+	padding: 0px 80px;
+}
+
+footer{
+	font-size: 17px;
+	background-color: black;
+	color:white;
+}
+
+.caja {
+	font-family: 'Source Sans Pro', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 3px 0px;
+    width: 100%;
+    -moz-border-radius: 75px 127px 75px 127px;
+    -webkit-border-radius: 35px 35px 35px 35px;
+    border: 3px solid #d18ed1;
+    background: rgba(247, 250, 247, 0.5);
+    padding: 5px 5px;
+}
+
+.lbl_format_date{
+	font-family: 'Gamja Flower', cursive;
+	font-size: 20px;
+	color: #151414;
+	margin: 3px 0px 3px 0px;
+	text-decoration: underline;
+}
+
+div .box_info_head{
+	font-family: 'Shrikhand', cursive;
+	color:orange;
+    background: -webkit-linear-gradient(top, rgba(52,247,52,1) 0%, rgba(158,234,8,1) 51%, rgba(52,247,52,1) 100%);
+    border-radius: 15px;
+    text-shadow: 7px 1px 7px #000; 
+    border: 13px solid #34f734;
+    margin: 0px 56px;
+}
+
+.footer_title{
+  font-family: 'Shrikhand', cursive;
+  color:white;
+  font-size: 30px;
+}
+
+.footer_data{
+   font-size: 20px;
+}
+
+
+.box_info_body{
+	border: 13px solid #9d0ede;
+    background: #61f121;
+    border-radius: 15px;
+    position: relative;
+    top: -65px;
+    left: 18px;
+}
+
+.nav_logo{
+	width: 50px;
+	height: 70px;
+}
+
+.index-box{
+	background: rgba(247, 250, 247, 0.5);
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 0px solid #000000;
+	margin: auto;
+    padding: 25px;
+    width: 90%;
+    -webkit-box-shadow: 0px 0px 150px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 150px -1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 150px -1px rgba(0,0,0,0.75);
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+.index-box h1{
+  font-family: 'Shrikhand', cursive;
+	font-size: 3.2em;
+  color: black;
+  text-decoration: none;
+}
+
+h3{
+  font-family: 'Shrikhand', cursive;
+  font-size: 2.0em;
+  color: black;
+  text-decoration: none;
+}
+
+.comment-button{
+	margin: 15px 0px 0px 120px;
+  padding: 4px 0px;
+}
+
+#comment_body{
+	width: 270px;
+  height: 100px;
+}
+
+.comment-box{
+	width: 75%;
+  margin: auto;
+}
+
+.galeria {
+  height: calc( 300px + 3em);
+  width: 500px;
+  margin:1em auto;
+  border: 1px solid #555;
+  position: relative;  
+}
+
+.galeria img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.galeria input[type=radio] {
+  position: relative;
+  bottom: calc(-300px - 1.5em);
+  left: .5em;
+}
+
+.galeria input[type=radio]:nth-of-type(1):checked ~ img:nth-of-type(1), .galeria input[type=radio]:nth-of-type(2):checked ~ img:nth-of-type(2), .galeria input[type=radio]:nth-of-type(3):checked ~ img:nth-of-type(3), .galeria input[type=radio]:nth-of-type(4):checked ~ img:nth-of-type(4), .galeria input[type=radio]:nth-of-type(5):checked ~ img:nth-of-type(5), .galeria input[type=radio]:nth-of-type(6):checked ~ img:nth-of-type(6), .galeria input[type=radio]:nth-of-type(7):checked ~ img:nth-of-type(7) , .galeria input[type=radio]:nth-of-type(8):checked ~ img:nth-of-type(8){
+  opacity: 1;
+}
+
+.black-box{
+	border: 1px solid;
+	padding: 2px;
+    margin: 5px 0px;
+}
+
+.auto-margin{
+	margin:auto;
+}
+
+.box-menu{
+	margin: auto;
+	height: 250px;
+}

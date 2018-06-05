@@ -1,0 +1,29 @@
+
+<nav class="white col-md-12">
+	<ul class="no-list row center-xs">
+		<li class="col-md auto-margin div-rotate">
+			<%=link_to "Inicio", root_path, :class =>"rotate"%>
+		</li>
+    <li class="col-md auto-margin div-rotate">
+      <%= link_to "Gestión", alumns_path, :class =>"rotate" %>
+    </li>
+    <% @categories.each do |category|%>
+		<li class="col-md auto-margin div-rotate">
+			<%= link_to category.name, category, :class =>"rotate" %>
+
+		</li>
+    <% end %>
+    <% if user_signed_in? %>
+    <li class="col-md auto-margin div-rotate">
+      <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, :class =>"rotate" %>
+    </li>
+    <%else%>
+    <li class="col-md auto-margin div-rotate">
+      <%= link_to "Iniciar Sesión", new_user_session_path, :class =>"rotate"%>
+    </li>
+    <li class="col-md auto-margin div-rotate">
+      <%= link_to "Crear Cuenta", new_user_registration_path, :class =>"rotate"%>
+    </li>
+    <%end%>
+	</ul>
+</nav>

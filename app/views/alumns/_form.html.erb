@@ -1,0 +1,63 @@
+<%= form_for(@alumn) do |f| %>
+	<% @alumn.errors.full_messages.each do |message| %>
+		<div class="be-red white">
+			 <%= message%>
+		</div>
+	<%end%>
+	<div class="row index-box">
+	    <div class="col-md-1" style="background: #c2ef6b;"></div>
+	     <div class="col-md-10">
+	     	<div class="row">
+	     		<div class="col-md-5 center-xs">
+					<h3 style="text-decoration: underline">Datos personales </h3>
+					<p class="lbl_format end-xs">Nombre: <%= f.text_field :nombre, placeholder: "Nombre" , :class => "form_control "%></p>
+					<p class="lbl_format end-xs">Apellido 1: <%= f.text_field :apellido1, placeholder: "Apellido 1" , :class => "form_control" %></p>
+					<p class="lbl_format end-xs">Apellido 2: <%= f.text_field :apellido2, placeholder: "Apellido 2" , :class => "form_control" %></p>
+					<p class="lbl_format end-xs">Teléfono Madre: <%= f.text_field :mother_phone, placeholder: "Teléfono" , :class => "form_control" %></p>
+					<p class="lbl_format end-xs">Teléfono Padre: <%= f.text_field :father_phone, placeholder: "Teléfono" , :class => "form_control" %></p>
+					<p class="lbl_format end-xs">Dirección: <%= f.text_area :direccion, placeholder: "Dirección" , :class => "form_control" %></p>
+					<p class="lbl_format end-xs">Alergias: <%= f.text_area :alergias, placeholder: "Alergias" , :class => "form_control" %></p>
+				</div>
+
+				<div class="col-md-7">
+					<div class="row center-xs">
+						<div class="col-md-12">
+							<h3 style="text-decoration: underline">Fotografia</h3>
+						</div>
+						<div class="col-md-12">
+							<% unless @alumn.id.blank? %>
+								<% if @alumn.cover.blank?%>
+									<p class="lbl_format" style="color:red">*Actualmente no tiene ninguna fotografía</p>
+								<% else%>
+									<p class="lbl_format" style="color:green">*Ya existe una fotografía asociada a este alumno. </p>
+								<%end%>
+							<%end %>
+							<%= f.file_field :cover%> 
+						</div>
+					</div>
+					<div class="row center-xs">
+						<div class="col-md-12">
+							<h3 style="text-decoration: underline">Opciones:</h3>
+						</div>
+						<div class="col-md-6">
+							<% @categories.each do |category| %>
+								<% if @alumn.categories.include?(category) %>
+									<div class="check row lbl_format"><%= check_box_tag "alumn[category_ids][]", category.id, checked: true%> <%= category.name%></div>
+								<% else %>
+									<div class="check row lbl_format"><%= check_box_tag "alumn[category_ids][]", category.id%> <%= category.name%></div>
+								<%end%>
+							<% end %>
+						</div>
+					</div>
+				</div>
+	     	</div>
+	     	<div class="row center-xs">
+	     		<div class="col-md-12 center-xs" >
+			<br>
+			<%= f.submit "Guardar", :class => 'btn-primary'%>
+		</div>
+	     	</div>
+	    </div>
+	  	<div class="col-md-1" style="background: #c2ef6b;"></div>
+	</div>
+<%end%>

@@ -1,0 +1,60 @@
+<h1 class="row center-xs text-title"><%=@category.name%></h1>
+<div class="row index-box">
+  <div class="col-md-1" style="background: #c2ef6b;"></div>
+	<div class="col-md-10">
+    <div class="row center-xs">
+      <div class="col-md-5 box-menu">
+        <div class="div-img hidden" >
+          <%= image_tag("listado-inscritos-dibujo.png", :class => "img", :alt => "Imagen listado", :style => "width:60px; height:60px;padding: 5px;") %>
+          <div class="text"><%= link_to "VER ALUMNOS", show_list_category_path(:id => @category.id.to_s) %></div>
+        </div>
+
+      </div>
+      <div class="col-md-5 box-menu">
+        <div class="div-img hidden" >
+          <% if @category.id==1 %>
+            <%= image_tag("cubiertos.png", :class => "img", :alt => "Imagen menu", :style => "width:60px; height:60px;padding: 5px;") %>
+            <div class="text"><%= link_to "MENÚ DEL MES", show_menu_path %></div>
+          <% end %>
+          <% if @category.id==2 %>
+            <%= image_tag("actividad.png", :class => "img", :alt => "Imagen actividades", :style => "width:60px; height:60px;padding: 5px;") %>
+            <div class="text"><%= link_to "ACTIVIDADES DEL MES", "https://ampatrinitariassalamanca.files.wordpress.com/2015/11/actividades-en-servicio-de-madrugadores.pdf" %></div>
+          <% end %>
+          <% if @category.id==3 %>
+            <%= image_tag("actividad.png", :class => "img", :alt => "Imagen actividades", :style => "width:60px; height:60px;padding: 5px;") %>
+            <div class="text"><%= link_to "ACTIVIDADES DEL MES", "http://www.ampavargasllosa.com/wp-content/uploads/2016/06/MARIO-VARGAS-LLOSA.pdf" %></div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="row center-xs">
+      <div class="col-md-5 box-menu">
+        <div class="div-img hidden" >
+          <% if @category.id==1 %>
+            <%= image_tag("horario.png", :class => "img", :alt => "Imagen horario", :style => "width:60px; height:60px;padding: 5px;") %>
+            <div class="text"><%= link_to "HORARIOS", show_timetable_comedor_path%></div>
+          <% end %>
+          <% if @category.id==2 %>
+              <%= image_tag("horario.png", :class => "img", :alt => "Imagen horario", :style => "width:60px; height:60px;padding: 5px;") %>
+            <div class="text"><%= link_to "HORARIOS", show_madrugadores_path%></div>
+            <% end %>
+            <% if @category.id==3 %>
+              <%= image_tag("horario.png", :class => "img", :alt => "Imagen horario", :style => "width:60px; height:60px;padding: 5px;") %>
+            <div class="text"><%= link_to "HORARIOS", show_timetable_tardones_path%></div>
+            <% end %>
+        </div>
+      </div>
+
+      <div class="col-md-5 box-menu">
+        <div class="div-img hidden" >
+          <%= image_tag("categoria.png", :class => "img", :alt => "Imagen categoria", :style => "width:60px; height:60px;padding: 5px;") %>
+          <div class="text"><%= link_to "EDITAR CATEGORÍA", edit_category_path(@category)%></div>
+        </div>
+      </div>
+
+
+    </div>
+  
+  </div>
+  <div class="col-md-1" style="background: #c2ef6b;"></div>
+</div>

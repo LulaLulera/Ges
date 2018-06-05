@@ -1,0 +1,26 @@
+<div class="col-md-12">
+    <div class="row  center-xs">
+      <p id="notice text" style="text-align: center;"><%= notice %></p>
+      
+    </div>
+  </div>
+
+<div class="row index-box">
+    <div class="col-md-1" style="background: #c2ef6b;"></div>
+      <div class="col-md-10">
+        <div class="row center-xs">
+          <p id="notice text" style="text-align: center;"><%= notice %></p>
+          <h1 class="center-xs">Alumnos inscritos en <%= @category.name %></h1>
+        </div>
+      <div class="row">
+        <div class="col-md-12 center-xs">
+          <% @category.alumns.each do |alumn| %>
+            <table class="row center-xs">       
+              <td class="lbl_format" style="width:500px;"><%= link_to "#{alumn.nombre} #{alumn.apellido1} #{alumn.apellido2}", alumn%></td>
+            </table>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  <div class="col-md-1" style="background: #c2ef6b;"></div>
+</div>

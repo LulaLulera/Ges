@@ -1,0 +1,64 @@
+		<h1 class="row center-xs text-title">Gestión</h1>
+
+<div class="row index-box">
+	<div class="col-md-1" style="background: #c2ef6b;"></div>
+	<div class="col-md-10">
+		<div class="row center-xs">
+			<div class="col-md-5 box-menu">
+				<div class="div-img hidden" >
+					<%= image_tag("listado-inscritos-dibujo.png", :class => "img", :alt => "Imagen listado", :style => "width:60px; height:60px;padding: 5px;") %>
+					<div class="text"><%= link_to "ADMINISTRAR ALUMNOS", show_list_path %></div>
+				</div>
+				 
+			</div>
+			<div class="col-md-5 box-menu">
+				<div class="div-img hidden" >
+					<%= image_tag("descargar.png", :class => "img", :alt => "Imagen descargar", :style => "width:60px; height:60px;padding: 5px;") %>
+					<div class="text"><%= link_to "DESCARGAR LISTADO", show_list_path(format: "csv") %></div>
+				</div> 
+			</div>
+		</div>
+		<div class="row center-xs">
+			<div class="col-md-5 box-menu">
+				<div class="div-img hidden" >
+					<%= image_tag("horario.png", :class => "img", :alt => "Imagen horario", :style => "width:60px; height:60px;padding: 5px;") %>
+					<div class="text"><%= link_to "HORARIOS", show_timetable_path%></div>
+				</div>
+			</div>
+			<div class="col-md-5 box-menu">
+				<div class="div-img hidden" >
+					<%= image_tag("recursos.jpg", :class => "img", :alt => "Imagen recursos", :style => "width:60px; height:60px;padding: 5px;") %>
+					<div class="text"><%= link_to "RECURSOS", show_resources_path %></div>
+				</div>
+			</div>
+		</div>
+		<div class="row center-xs">
+			<div class="col-md-5 box-menu">
+				<div class="div-img hidden" >
+					<%= image_tag("categoria.png", :class => "img", :alt => "Imagen categorías", :style => "width:60px; height:60px;padding: 5px;") %>
+					<div class="text"><%= link_to 'VER CATEGORÍAS', categories_path %></div>
+				</div>
+			</div>
+			<div class="col-md-5 box-menu">
+				<div class="div-img hidden" >
+					<%= image_tag("docs.png", :class => "img", :alt => "Imagen documentos", :style => "width:100px; height:60px;padding: 5px;") %>
+              		<div class="text"><%= link_to "DOCUMENTOS", docs_path %></div>
+				</div>
+			</div>
+		</div>
+		<div class="row center-xs">
+			<div class="col-md-5 box-menu">
+				<div class="div-img hidden" >
+					<%= image_tag("mas.jpg", :class => "img", :alt => "Imagen categorías", :style => "width:60px; height:60px;padding: 5px;") %>
+					<div class="text"><%= link_to 'NUEVA CATEGORÍA', new_category_path() %></div>
+				</div>
+			</div>
+		</div>
+
+		
+	</div>
+	<div class="col-md-1" style="background: #c2ef6b;"></div>
+</div>
+	
+
+	

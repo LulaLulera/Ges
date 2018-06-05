@@ -1,0 +1,77 @@
+<div class="row index-box">
+	<div class="col-md-1" style="background: #c2ef6b;"></div>
+	<div class="col-md-10">
+		<div class=" row">
+			<div class="center-xs col-md-12">
+				<h1>Datos personales</h1>
+			</div>
+			<div class="row">
+				<div class=" col-md-2" style="margin: 0px 10px;">
+					<%= image_tag @alumn.cover.url(:thumb), :class => 'img_photo'%>
+				</div>
+				<div class="col-md-6 body_content">
+					<p class="lbl_format"><span style="font-weight: bold;">Nombre Completo:</span> <%= @alumn.nombre %> <%= @alumn.apellido1%> <%= @alumn.apellido2 %></p>
+					<p class="lbl_format"><span style="font-weight: bold;">Teléfono Madre:</span> <%= @alumn.mother_phone%></p>
+					<p class="lbl_format"><span style="font-weight: bold;">Teléfono Padre:</span> <%= @alumn.father_phone%></p>
+					<p class="lbl_format"><span style="font-weight: bold;">Dirección:</span> <%= @alumn.direccion%></p>
+					<p class="lbl_format"><span style="font-weight: bold;">Alergias:</span> <%= @alumn.alergias%></p>
+				</div>
+				<div class="col-md-3">
+					<div class="row center-xs">
+						<p class="lbl_format col-md-12" style="font-weight: bold;">Inscrito en:</p>
+					</div>
+					<div class="row center-xs">
+						<div class="col-md-12">
+							<% @alumn.categories.each do |category| %>		
+								<button class="btn-primary" style= "padding: 5px;"><%= link_to category.name, category %></button>
+								<br>
+							<% end %>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+
+		<div class="row" style="background:#c2ef6b;height: 10px; margin:20px;"></div>
+
+		<div class="row">
+			<div class="col-md-6 center-xs">
+				<h3>Comentarios <i class="fa fa-comments-o" style="font-size:35px"></i></h3>
+				<div class="row comment-box">
+					<% if @alumn.comments.count > 0 %>
+						<% @alumn.comments.each do |comment| %>
+							<div class="col-md-12"     margin-bottom: 10px;>
+								<div class="row">
+									<%= label_tag comment.updated_at.to_date.strftime("%d-%m-%Y"), nil, class: 'lbl_format_date col-md-4'%>
+								</div>
+								<div class="row">
+									<%= label_tag comment.body, nil, class: 'lbl_format col-md-12'%>
+								</div>
+								<div class="row">
+		       						<button class="col-md-2 comment-button">
+										<%= link_to [comment.alumn, comment],method: :delete, :data => { :confirm => '¿Estas seguro de eliminar el registro?' } do %>
+  											<i class="fa fa-trash" style="font-size:20px"></i>
+										<% end %>
+									</button>
+		       					</div>
+							</div>
+						<% end %>
+					<% else %>
+						<%= label_tag "No existen comentarios", nil, class: 'lbl_format col-md-12'%>
+					<% end %>
+				</div>
+			</div>
+			<div class="col-md-6 center-xs">
+				<h3 class="col-md-12">Nuevo Comentario</h3>
+				<%= render "comments/form" %>			
+			</div>
+		</div>
+		<div class="row">
+			<% unless @alumn.user.nil? %>
+				<p class="col-md-12 lbl_format center-xs">Alumno añadido por <%= @alumn.user.email%></p>
+			<%end%>
+		</div>
+	</div>
+	<div class="col-md-1" style="background: #c2ef6b;"></div>
+</div>
+
